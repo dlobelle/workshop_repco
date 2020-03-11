@@ -5,6 +5,22 @@ Estimation of the location of microplastic sinking from the surface of the ocean
 In the command line type: python for_repco_workshop.py 
 The figure will be produced in the results/
 
+# Version of language
+python 3.7.1 
+
+# Packages loaded in main script: 
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pickle 
+from numpy import *
+import scipy.linalg
+import pandas as pd 
+import netCDF4 as nc4
+import xarray as xr
+from scipy.stats.stats import pearsonr
+ 
+
 # Test
 
 Version 0.1.0

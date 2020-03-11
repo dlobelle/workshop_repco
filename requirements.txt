@@ -1,0 +1,15 @@
+python 3.7.1
+ 
+packages and libraries loaded:
+import numpy as np
+import matplotlib.pyplot as plt
+import pickle 
+from numpy import *
+import scipy.linalg
+import pandas as pd 
+import netCDF4 as nc4
+import xarray as xr
+from scipy.stats.stats import pearsonr
+
+
+macOS 10.14.6
