@@ -1,3 +1,10 @@
+# Project description
+Estimation of the location of microplastic sinking from the surface of the ocean in the Mediterranean for 4 months in year 2007. This tests the seasonality of plastic sinking 
+
+# Running the project
+In the command line type: python for_repco_workshop.py 
+The figure will be produced in the results/
+
 # Test
 
 Version 0.1.0
