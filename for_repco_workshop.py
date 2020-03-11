@@ -1,4 +1,5 @@
 ## Created 11 Nov 2019
+# Estimating the location in the Mediterranean where floating plastic sinks in 4 months in 2007
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,11 +11,11 @@ import netCDF4 as nc4
 import xarray as xr
 from scipy.stats.stats import pearsonr
 
-""" Loading Mikael's sinking data """
+""" Loading location of where plastic sinking data """
 
 fileObject = open('./data/raw/forDelphine.pickle', 'rb')
-data = pickle.load(fileObject)
-lons = pickle.load(fileObject) # longitude coordinates
+data = pickle.load(fileObject) # sinking data
+lons = pickle.load(fileObject) # longitude 
 lats = pickle.load(fileObject) # latitude
 
 """ Winter 2007 """ # 1st data point = Feb 2006
@@ -46,15 +47,14 @@ med_lat_min = min(lats)
 med_lat_max = max(lats)
 
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=True)
-ax1.scatter(X,Y,w07_data.T,c=w07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) #row=0, col=0
+ax1.scatter(X,Y,w07_data.T,c=w07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) 
 ax1.title.set_text('Jan \'07')
-ax2.scatter(X,Y,sp07_data.T,c=sp07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) #row=1, col=0
+ax2.scatter(X,Y,sp07_data.T,c=sp07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) 
 ax2.title.set_text('April \'07')
-ax3.scatter(X,Y,su07_data.T,c=su07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) #row=0, col=1
+ax3.scatter(X,Y,su07_data.T,c=su07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) 
 ax3.title.set_text('July \'07')
-ax4.scatter(X,Y,a07_data.T,c=a07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) #row=1, col=1
+ax4.scatter(X,Y,a07_data.T,c=a07_data.T,cmap=plt.cm.jet,vmin=0, vmax=0.2) 
 ax4.title.set_text('Oct \'07')
-#ax.colorbar(ax4)
 fig.suptitle('Sinking')
 plt.show()
 plt.savefig('./results/figures/Sinking_2007.png')
